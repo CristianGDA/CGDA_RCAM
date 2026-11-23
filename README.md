@@ -13,3 +13,9 @@ This program computes and evaluates the aircraft dynamics in a steady, straight 
 6. **Nonlinear time domain response**: Compares ideal (instantaneous) control inputs against first order actuator and engine dynamics with rate and position limits under control surface and engine throttle doublet inputs.
 
 ## RESULTS
+
+## REFERENCES
+[1] P.F. Lambrechts et al. Robust flight control design challenge problem formulation and manual: the research civil aircraft (RCAM). Technical Publication TP-088-3, Group for aeronautical research and technology in Europe GARTEUR-FM(AG08), 1995.
+[2] J.-F. Magni, S. Bennani, and J. Terlouw, Robust Flight Control, A Design Challenge (GARTEUR). Berlin, Germany: Springer-Verlag, 1997, vol. 224, Lecture Notes in Control and Information Sciences.
+[3] Brian L. Stevens, Frank L. Lewis, Eric N. Johnson, Aircraft control and simulation, Controls Design and Autonomous Systems, 3rd edition Wiley 2016.
+[4] U.S. Department of Defense, "Flying Qualities of Piloted Aircraft", Military Handbook MIL-HDBK-1797A, Dec. 19, 1997.
