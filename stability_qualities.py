@@ -7,12 +7,12 @@ def stability_analysis(A_transformed):
 
     """
     This function computes and displays the dynamic stability characteristics and flying qualities 
-    compliance (MIL-HDBK-1797) for a linearized state-space representation of the aircraft 
+    compliance (MIL-HDBK-1797A) for a linearized state-space representation of the aircraft 
     model around the trim condition (steady state, straight and level flight).
 
     Background
     =========================
-    MIL-HDBK-1797 (previously, MIL-STD-1797A) provides guidance for flying qualities requirements 
+    MIL-HDBK-1797A (previously, MIL-STD-1797A) provides guidance for flying qualities requirements 
     and compliance across different aircraft classes and flight categories.
     
     Inputs:
@@ -28,9 +28,9 @@ def stability_analysis(A_transformed):
     =========================
         None (prints the following tables):
         - TABLE 1: Longitudinal dynamic stability characteristics
-        - TABLE 2: Longitudinal flying qualities compliance based on MIL-HDBK-1797 requirements
+        - TABLE 2: Longitudinal flying qualities compliance based on MIL-HDBK-1797A requirements
         - TABLE 3: Lateral/directional dynamic stability characteristics
-        - TABLE 4: Lateral/directional flying qualities compliance based on MIL-HDBK-1797 requirements
+        - TABLE 4: Lateral/directional flying qualities compliance based on MIL-HDBK-1797A requirements
     """
 
     print("\n")
@@ -141,7 +141,7 @@ def stability_analysis(A_transformed):
     "Reference": Style.BRIGHT +"Reference\n(MIL-HDBK-1797A)" + Style.RESET_ALL}
 
     print("\n")
-    print(Style.BRIGHT + "- LONGITUDINAL FLYING QUALITIES COMPLIANCE (MIL-HDBK-1797):" + Style.NORMAL)
+    print(Style.BRIGHT + "- LONGITUDINAL FLYING QUALITIES COMPLIANCE (MIL-HDBK-1797A):" + Style.NORMAL)
 
     # Display table
     print(tabulate([damp_ratio_sp, damp_ratio_ph],
@@ -281,7 +281,7 @@ def stability_analysis(A_transformed):
         "Reference": Style.BRIGHT +"Reference\n(MIL-HDBK-1797A)" + Style.RESET_ALL}
 
     print("\n")
-    print(Style.BRIGHT + "- LATERAL/DIRECTIONAL FLYING QUALITIES COMPLIANCE (MIL-HDBK-1797):" + Style.NORMAL)
+    print(Style.BRIGHT + "- LATERAL/DIRECTIONAL FLYING QUALITIES COMPLIANCE (MIL-HDBK-1797A):" + Style.NORMAL)
 
     print(tabulate(mode_param,
                     headers=headers_map2,
