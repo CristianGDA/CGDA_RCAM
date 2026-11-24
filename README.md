@@ -2,7 +2,7 @@
 
 Flight dynamics toolkit for the twin engine Research Civil Aircraft Model (RCAM), which was developed by the Group for Aeronautical Research and Technology in Europe (GARTEUR[1][2]).
 
-> **Theoretical background:** The derivation of the 6 DoF equations of motion, reference frames, and RCAM physical, geometry and aerodynamic parameters is detailed in [Chapter 2](docs/chapter_2_rcam_model.pdf) (in Spanish) of my thesis. The trim computation and numerical linearization algorithms (originally developed in MATLAB/Simulink) are documented in [Chapter 3](docs/chapter_3_trim_linearization.pdf) (in Spanish).
+> **Theoretical background:** The derivation of the 6 DoF equations of motion, reference frames, and RCAM physical, geometry and aerodynamic parameters is detailed in [Chapter 2](thesis_extract/chapter_2_rcam_model.pdf) (in Spanish) of my thesis. The trim computation and numerical linearization algorithms (originally developed in MATLAB/Simulink) are documented in [Chapter 3](thesis_extract/chapter_3_trim_linearization.pdf) (in Spanish).
 
 ## OVERVIEW
 This program computes and evaluates the aircraft dynamics in a steady, straight and level flight condition through the following implementations:
