@@ -70,7 +70,7 @@ It is presented a plotting menu which allows you to evaluate doublet responses a
 
 ![responses](docs/images/plot_menu.png)
 
-In this example, the response to a symmetric **$\pm 3^\circ$ engine throttle doublet** applied around the equilibrium throttle setting ($\delta_{th1,2} = 4.70^\circ \pm 3^\circ$), starting at $t = 10\text{ s}$ with a $5\text{ s}$ pulse duration per half-cycle ($10\text{–}15\text{ s}$ positive pulse, $15\text{–}20\text{ s}$ negative pulse):
+In this example, it is presented the response to a symmetric **$\pm 3^\circ$ engine throttle doublet** applied around the equilibrium throttle setting ($\delta_{th1,2} = 4.70^\circ \pm 3^\circ$), starting at $t = 10\text{ s}$ with a $5\text{ s}$ pulse duration per half-cycle ($10\text{–}15\text{ s}$ positive pulse, $15\text{–}20\text{ s}$ negative pulse):
 
 
 
