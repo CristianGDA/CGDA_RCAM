@@ -27,12 +27,29 @@ Executing "RCAM_main.py" the terminal will require the following input at termin
 
 ------------------
 The following parameters are proposed:
+
 **Desired trim velocity ($V_a$):** `85 m/s` 
 
 **Initial altitude ($h$):** `1000 m`
 
+---------------
+### Console outputs
 
-The next parameters will be proposed.
+1. **Simulation Header & Summary**
+
+Displays the aircraft information, selected flight condition, and the **MIL-HDBK-1797A** reference standard used for flying qualities evaluation.
+
+![Summary description](img/summary.png)
+
+2. **Trim Condition Results** 
+
+Two summary tables are outputed: the steady-state equilibrium vector $x_0$ and the corresponding trim control inputs $u_e$. These vectors were found via SLSQP (converging to a residual of $2.76 \times 10^{-9}$)
+
+Notice that at $V_a = 85\text{ m/s}$, straight-and-level equilibrium is maintained with $\theta = \alpha = 0.85^\circ$. It requires an elevator deflection $\delta_e = -10.19^\circ$, and symmetric throttle $\delta_{th1} = \delta_{th2} = 4.70^\circ$ which is within actuator limits (at $140\text{ m/s}$ the engines reach upper thrust saturation).
+
+
+
+
 
 
 ## REFERENCES
