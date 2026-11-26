@@ -62,15 +62,23 @@ Presents the longitudinal ($4 \times 4$) and lateral-directional ($5 \times 5$) 
    
 Summarizes the modal parameters for all flight modes and evaluates Level 1 compliance against **MIL-HDBK-1797A** for Class III, Category B.
 
-![stability and flying qualities](img/stability.png)
+![Stability and flying qualities](img/stability.png)
 
 
 5. ### Nonlinear doublet response 
 It is presented a plotting menu which allows you to evaluate doublet responses across any of the five control inputs (perturbation parameters such as amplitude, pulse width, and start time of the doublet input can be configured in `doublet_response.py`): 
 
-![responses](docs/images/plot_menu.png)
+![Responses](docs/images/plot_menu.png)
 
 In this example, it is presented the response to a symmetric **$\pm 3^\circ$ engine throttle doublet** applied around the equilibrium throttle setting ($\delta_{th1,2} = 4.70^\circ \pm 3^\circ$), starting at $t = 10\text{ s}$ with a $5\text{ s}$ pulse duration per half-cycle ($10\text{–}15\text{ s}$ positive pulse, $15\text{–}20\text{ s}$ negative pulse):
+
+![Engine throttle doublet response](docs/images/engine_doublet.png)
+
+Three subplots are presented:
+
+- **Top subplot (Control Input):** Compares the ideal doublet command (dashed) against the actual actuator engine response (solid) which was modeled with first order equation with a time constant of ($\tau_{eng} = 1.5\text{ s}$), rate limits ($\pm 1.6^\circ/\text{s}$), and position limits ($[0.5^\circ, 10.0^\circ]$), operating within the unsaturated range ($1.70^\circ\text{–}7.70^\circ$).
+- **Middle subplot (Attitude & Incidence):** Compares angle of attack ($\alpha$) and pitch angle ($\theta$) for the ideal vs. actuator model, illustrating the fast Short Period transient ($T \approx 3.8\text{ s}$) and the lightly damped Phugoid oscillation.
+- **Bottom subplot (Airspeed & Altitude):** Shows the slow Phugoid energy exchange ($T \approx 46.6\text{ s}$) between airspeed ($V$) and altitude ($h$).
 
 
 
