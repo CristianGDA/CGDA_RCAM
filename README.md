@@ -80,7 +80,9 @@ Three subplots are presented:
 - **Middle subplot (Attitude & Incidence):** Compares angle of attack ($\alpha$) and pitch angle ($\theta$) for the ideal vs. actuator model, illustrating the fast Short Period transient ($T \approx 3.8\text{ s}$) and the lightly damped Phugoid oscillation.
 - **Bottom subplot (Airspeed & Altitude):** Shows the slow Phugoid energy exchange ($T \approx 46.6\text{ s}$) between airspeed ($V$) and altitude ($h$).
 
+Another interesting plot is the rudder doublet commanded and actuated response, which it is possible to visualize coupling between yaw and roll visualizing dutch roll mode and spiral.
 
+![Rudder doublet response](docs/images/rudder_doublet.png)
 
 ## REFERENCES
 [1] P.F. Lambrechts et al. Robust flight control design challenge problem formulation and manual: the research civil aircraft (RCAM). Technical Publication TP-088-3, Group for aeronautical research and technology in Europe GARTEUR-FM(AG08), 1995.
