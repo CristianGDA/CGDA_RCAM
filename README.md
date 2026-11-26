@@ -16,6 +16,25 @@ This program computes and evaluates the aircraft dynamics in a steady, straight 
 
 ## RESULTS
 
+### Terminal inputs
+Executing "RCAM_main.py" the terminal will require the following input at terminal to achieve the goal of steady state flight condition.
+
+**Desired trim velocity ($V_a$):** because the RCAM aerodynamic model is defined for the approach envelope, valid trim speeds comes from `60 m/s` (near minimum thrust margin) to `140 m/s` (near upper engine thrust saturation). 
+
+**Initial altitude ($h$):** used as reference at sea level, density will keep constant in all altitude, $\rho = 1.225\text{ kg/m}^3$).
+
+**NOTE: Aircraft configuration:** Mass, inertia tensor, and geometric properties can be modified in `rcam_parameters.py`, (tables of RCAM parameters and limits are presented in [Chapter 2](thesis_extract/chapter_2_rcam_model.pdf) of my thesis extract).
+
+------------------
+The following parameters are proposed:
+**Desired trim velocity ($V_a$):** `85 m/s` 
+
+**Initial altitude ($h$):** `1000 m`
+
+
+The next parameters will be proposed.
+
+
 ## REFERENCES
 [1] P.F. Lambrechts et al. Robust flight control design challenge problem formulation and manual: the research civil aircraft (RCAM). Technical Publication TP-088-3, Group for aeronautical research and technology in Europe GARTEUR-FM(AG08), 1995.
 
