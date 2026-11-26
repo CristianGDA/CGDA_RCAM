@@ -19,18 +19,18 @@ This program computes and evaluates the aircraft dynamics in a steady, straight 
 ### Terminal inputs
 Executing "RCAM_main.py" the terminal will require the following input at terminal to achieve the goal of steady state flight condition.
 
-**Desired trim velocity ($V_a$):** because the RCAM aerodynamic model is defined for the approach envelope, valid trim speeds comes from `60 m/s` (near minimum thrust margin) to `140 m/s` (near upper engine thrust saturation). 
+**Desired trim velocity $V_a$:** because the RCAM aerodynamic model is defined for the approach envelope, valid trim speeds comes from `60 m/s` (near minimum thrust margin) to `140 m/s` (near upper engine thrust saturation). 
 
-**Initial altitude ($h$):** used as reference at sea level, density will keep constant in all altitude, $\rho = 1.225\text{ kg/m}^3$).
+**Initial altitude $h$:** used as reference at sea level, density will keep constant in all altitude, `$\rho = 1.225\text{ kg/m}^3$`.
 
 **NOTE: Aircraft configuration:** Mass, inertia tensor, and geometric properties can be modified in `rcam_parameters.py`, (tables of RCAM parameters and limits are presented in [Chapter 2](thesis_extract/chapter_2_rcam_model.pdf) of my thesis extract).
 
 ------------------
 The following parameters are proposed:
 
-**Desired trim velocity ($V_a$):** `85 m/s` 
+- **Desired trim velocity $V_a$:** `85 m/s` 
 
-**Initial altitude ($h$):** `1000 m`
+- **Initial altitude $h$:** `1000 m`
 
 ---------------
 ### Console outputs
@@ -43,12 +43,19 @@ Displays the aircraft information, selected flight condition, and the **MIL-HDBK
 
 2. **Trim Condition Results** 
 
-Two summary tables are outputed: the steady-state equilibrium vector $x_0$ and the corresponding trim control inputs $u_e$. These vectors were found via SLSQP (converging to a residual of $2.76 \times 10^{-9}$)
+Two summary tables are outputed: the steady-state equilibrium vector `$x_0$` and the corresponding trim control inputs `$u_e$`. These vectors were found via SLSQP (converging to a residual of `$2.76 \times 10^{-9}$`)
 
-Notice that at $V_a = 85\text{ m/s}$, straight-and-level equilibrium is maintained with $\theta = \alpha = 0.85^\circ$. It requires an elevator deflection $\delta_e = -10.19^\circ$, and symmetric throttle $\delta_{th1} = \delta_{th2} = 4.70^\circ$ which is within actuator limits (at $140\text{ m/s}$ the engines reach upper thrust saturation).
+Notice that at `$V_a = 85\text{ m/s}$`, straight-and-level equilibrium is maintained with `$\theta = \alpha = 0.85^\circ$`. It requires an elevator deflection `$\delta_e = -10.19^\circ$`, and symmetric throttle `$\delta_{th1} = \delta_{th2} = 4.70^\circ$` which is within actuator limits (at `$140\text{ m/s}$` the engines reach upper thrust saturation).
 
+NOTE: These vectors are important to initialize an online simulation in the steady state, straight and level flight condition, also for linearize the nonlinear system and as a reference for control system design.
 
+![Trim tables](img/trim_tables.png)
 
+3.	**Decoupled linearized state and control matrices ($A, B$)** 
+
+Presents the longitudinal ($4 \times 4$) and lateral-directional ($5 \times 5$) state and control matrices extracted around the trim condition using central finite differences. These matrices enables local stability analysis and linear flight control law design.
+
+![Statae and control matrices](img/matrices.png)
 
 
 
